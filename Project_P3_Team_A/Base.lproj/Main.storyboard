@@ -136,7 +136,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XvN-9G-X3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1578" y="-109"/>
+            <point key="canvasLocation" x="-1614" y="-272"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -158,6 +158,6 @@
         <image name="train-png-clipart-transparent.png" width="920" height="779"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="H02-by-hE5"/>
+        <segue reference="e7V-O5-E0A"/>
     </inferredMetricsTieBreakers>
 </document>
