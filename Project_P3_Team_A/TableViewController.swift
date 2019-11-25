@@ -27,18 +27,15 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
        
         
-        //get the csv file and parse it
+        //get the csv file and parse it.  The parsing algorithm sorts the data rows with the headers
         guard let csvPath = Bundle.main.path(forResource: "CURR_EQUIP", ofType: "csv") else { return }
         
         do {
             let csvData = try String(contentsOfFile: csvPath, encoding: String.Encoding.utf8)
-            let csvAccess =  CSwiftV(with: csvData, separator: ",", headers: nil)
+            let arrayHeaderRowCombined : [[String : String]] = CSwiftV(with: csvData).keyedRows!
             
-            print(csvAccess.headers)
-            
-            for row in csvAccess.rows {
-                print(row)
-            }
+            //this is our array that has all our data sorted from the csv file
+            print(arrayHeaderRowCombined)
             
         } catch{
             print(error)
@@ -180,3 +177,4 @@ public class CSwiftV {
         return merged
     }
 }
+
