@@ -26,6 +26,8 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.setToolbarHidden( true, animated: true)
+        self.navigationController?.setNavigationBarHidden(false,animated: true)
         //get the csv file and parse it
         guard let csvPath = Bundle.main.path(forResource: "CURR_EQUIP", ofType: "csv") else { return }
         
