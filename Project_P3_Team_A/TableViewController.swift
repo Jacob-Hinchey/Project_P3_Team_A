@@ -20,6 +20,7 @@ import CoreData
 class TableViewController: UITableViewController {
     public var roadNumbers: [String] = []
     var autoNumbers: [String] = []
+    var serviceType: [String] = []
     var tableCells = [[]]
     let headers = ["Trains"]
     
@@ -34,14 +35,14 @@ class TableViewController: UITableViewController {
             let arrayHeaderRowCombined : [[String : String]] = CSwiftV(with: csvData).keyedRows!
             
             for row in arrayHeaderRowCombined {
-                autoNumbers.append(row["Auto number ID"]!)
                 roadNumbers.append(row["Road number"]!)
+                serviceType.append(row["Service Type"]!)
             }
         } catch{
             print(error)
         }
         
-        tableCells[0] = autoNumbers
+        tableCells[0] = roadNumbers
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -74,7 +75,7 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "My Cell", for: indexPath)
         
         if indexPath.section == 0 {
-            cell.textLabel?.text = String(format: "%@ - %@", autoNumbers[indexPath.row], roadNumbers[indexPath.row])
+            cell.textLabel?.text = String(format: "%@ - %@", roadNumbers[indexPath.row], serviceType[indexPath.row])
         }
         if indexPath.row % 2 == 0 {
             cell.backgroundColor = UIColor.black
