@@ -18,14 +18,13 @@ import CoreData
 
 
 class TableViewController: UITableViewController {
-    var roadNumbers: [String] = []
+    public var roadNumbers: [String] = []
     var autoNumbers: [String] = []
     var tableCells = [[]]
     let headers = ["Trains"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         //get the csv file and parse it
         guard let csvPath = Bundle.main.path(forResource: "CURR_EQUIP", ofType: "csv") else { return }
@@ -57,11 +56,18 @@ class TableViewController: UITableViewController {
         // Fetch the database contents.
     }
     
-    //For long press on table cell
+    
     @IBAction func editTrain(_ gestureRecognizer: UILongPressGestureRecognizer) {
         if gestureRecognizer.state == .began {
-            //seque to view controller
+            //long press segue
         }
+    }
+    
+    // segue in show information viewcontroller
+    // on short press with deselect (information not being passed yet)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "showSegue", sender: self)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

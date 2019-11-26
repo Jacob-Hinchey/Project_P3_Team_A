@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     //after long tap we segue here
     //we need to add functionality to edit the train data
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     

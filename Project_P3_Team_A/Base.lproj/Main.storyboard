@@ -43,15 +43,34 @@
                     <navigationItem key="navigationItem" title="Caboose View" id="Jhx-Xh-ihC">
                         <barButtonItem key="rightBarButtonItem" title="Filter" id="Gb7-Ok-OwG"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="hlj-1b-2tG" kind="show" identifier="showSegue" id="ari-Rz-Uqz"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="editSegue" id="OXg-FF-Mki"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zpb-yR-cIP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Hug-Z9-JRp">
                     <connections>
-                        <action selector="editTrain:" destination="Kyg-FP-iay" id="4cN-dz-JvQ"/>
+                        <action selector="editTrain:" destination="Kyg-FP-iay" id="IEL-l2-ccE"/>
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-725" y="113"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="QZx-Ts-RQq">
+            <objects>
+                <viewController id="hlj-1b-2tG" customClass="ViewController2" customModule="Project_P3_Team_A" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tNg-uZ-QcH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="pYT-rn-DLN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t09-bh-8Np" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="359.4202898550725" y="-239.0625"/>
         </scene>
         <!--Launch View Controller-->
         <scene sceneID="vtY-IG-kBQ">
@@ -142,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="77" y="113"/>
+            <point key="canvasLocation" x="366.66666666666669" y="488.83928571428567"/>
         </scene>
     </scenes>
     <resources>
