@@ -4,10 +4,11 @@
 //
 //  Created by Morgan Houston on 11/12/19.
 //  Copyright © 2019 Team A. All rights reserved.
-//  Edited by Todd Harper on 11/22/19 (added a parsing algorithm to show our data)
+//
 
 
 
+//TESTING
 
 // short tap will display() the train data
 // need to add filter() functionality
@@ -20,55 +21,58 @@ import CoreData
 
 
 class TableViewController: UITableViewController {
+    var roadNumbers: [String] = []
+    var autoNumbers: [String] = []
+    var tableCells = [[]]
+    let headers = ["Trains"]
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-       
         
-        //get the csv file and parse it.  The parsing algorithm sorts the data rows with the headers
+        
+        //get the csv file and parse it
         guard let csvPath = Bundle.main.path(forResource: "CURR_EQUIP", ofType: "csv") else { return }
         
         do {
             let csvData = try String(contentsOfFile: csvPath, encoding: String.Encoding.utf8)
             let arrayHeaderRowCombined : [[String : String]] = CSwiftV(with: csvData).keyedRows!
             
-            //this is our array that has all our data sorted from the csv file
-            print(arrayHeaderRowCombined)
-            
+            for row in arrayHeaderRowCombined {
+                roadNumbers.append(row["Auto number ID"]!)
+                autoNumbers.append(row["Road number"]!)
+            }
         } catch{
             print(error)
         }
-    }
-    
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        // Fetch the database contents.
         
-    
-    }
-    
-    
-    //For long press on table cell
-    @IBAction func editTrain(_ gestureRecognizer: UILongPressGestureRecognizer) {
-        if gestureRecognizer.state == .began {
-            //seque to view controller
-        }
-        
+        tableCells[0] = roadNumbers
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return tableCells[section].count
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // Fetch the database contents.
+    }
+    
+    //For long press on table cell
+    @IBAction func editTrain(_ gestureRecognizer: UILongPressGestureRecognizer) {
+        if gestureRecognizer.state == .began {
+            //seque to view controller
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "My Cell", for: indexPath)
+        
+        if indexPath.section == 0 {
+            cell.textLabel?.text = String(format: "%@ - %@", roadNumbers[indexPath.row], autoNumbers[indexPath.row])
+        }
         
         // Configure the cell...
         // Display the cell label and subtitle.
@@ -76,18 +80,17 @@ class TableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section < headers.count {
+            return headers[section]
+        }
+        
+        return nil
+    }
+    
 }
 
-
-
-
-
-
-
-
-
 /* THIS IS A MUCH BETTER PARSING CLASS I FOUND WE CAN USE */
-
 extension String {
     
     var isEmptyOrWhitespace: Bool {
@@ -97,12 +100,10 @@ extension String {
     var isNotEmptyOrWhitespace: Bool {
         return !isEmptyOrWhitespace
     }
-    
 }
 
 // MARK: Parser
 public class CSwiftV {
-    
     /// The number of columns in the data
     private let columnCount: Int
     /// The headers from the data, an Array of String
