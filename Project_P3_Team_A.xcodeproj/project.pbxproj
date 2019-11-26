@@ -16,6 +16,7 @@
 		8CBD6325235F6DFB00912B9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CBD6323235F6DFB00912B9A /* Main.storyboard */; };
 		8CBD6327235F6DFE00912B9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CBD6326235F6DFE00912B9A /* Assets.xcassets */; };
 		8CBD632A235F6DFE00912B9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CBD6328235F6DFE00912B9A /* LaunchScreen.storyboard */; };
+		8D709D8E238D83ED006C8979 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D709D8D238D83ED006C8979 /* LaunchViewController.swift */; };
 		CE020198238D70E4005C2A2E /* train-png-clipart-original.png in Resources */ = {isa = PBXBuildFile; fileRef = CE020197238D70E4005C2A2E /* train-png-clipart-original.png */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		8CBD6326235F6DFE00912B9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CBD6329235F6DFE00912B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CBD632B235F6DFE00912B9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D709D8D238D83ED006C8979 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		CE020197238D70E4005C2A2E /* train-png-clipart-original.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "train-png-clipart-original.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 				8CBD6328235F6DFE00912B9A /* LaunchScreen.storyboard */,
 				8CBD632B235F6DFE00912B9A /* Info.plist */,
 				8C3BE944238CD63E00335116 /* TableViewController.swift */,
+				8D709D8D238D83ED006C8979 /* LaunchViewController.swift */,
 			);
 			path = Project_P3_Team_A;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CBD6322235F6DFB00912B9A /* ViewController.swift in Sources */,
+				8D709D8E238D83ED006C8979 /* LaunchViewController.swift in Sources */,
 				8C3BE949238CE5EB00335116 /* ViewController2.swift in Sources */,
 				8CBD6320235F6DFB00912B9A /* AppDelegate.swift in Sources */,
 				8C3BE945238CD63E00335116 /* TableViewController.swift in Sources */,

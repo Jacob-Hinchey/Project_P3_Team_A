@@ -19,6 +19,11 @@ class ViewController: UIViewController {
     
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setToolbarHidden( true, animated: true)
+        self.navigationController?.setNavigationBarHidden(false,animated: true)
+    }
 
 
 }

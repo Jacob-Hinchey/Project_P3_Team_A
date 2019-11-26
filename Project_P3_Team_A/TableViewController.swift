@@ -26,8 +26,6 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.setToolbarHidden( true, animated: true)
-        self.navigationController?.setNavigationBarHidden(false,animated: true)
         //get the csv file and parse it
         guard let csvPath = Bundle.main.path(forResource: "CURR_EQUIP", ofType: "csv") else { return }
         
@@ -46,6 +44,11 @@ class TableViewController: UITableViewController {
         tableCells[0] = autoNumbers
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setToolbarHidden( true, animated: true)
+        self.navigationController?.setNavigationBarHidden(false,animated: true)
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -53,11 +56,6 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return tableCells[section].count
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        // Fetch the database contents.
-    }
-    
     
     @IBAction func editTrain(_ gestureRecognizer: UILongPressGestureRecognizer) {
         if gestureRecognizer.state == .began {

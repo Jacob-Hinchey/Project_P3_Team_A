@@ -16,5 +16,10 @@ class ViewController2: UIViewController {
         // table row with a stack view
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setToolbarHidden( true, animated: true)
+        self.navigationController?.setNavigationBarHidden(false,animated: true)
+    }
+    
 
 }
