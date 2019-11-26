@@ -29,6 +29,7 @@ class ViewController2: UIViewController {
     @IBOutlet weak var colorLabel: UILabel!
     @IBOutlet weak var axilLabel: UILabel!
     @IBOutlet weak var retailerLabel: UILabel!
+    @IBOutlet weak var trainImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

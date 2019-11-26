@@ -85,7 +85,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Length: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbV-ho-VJq">
-                                <rect key="frame" x="20" y="205" width="84.5" height="29"/>
+                                <rect key="frame" x="20" y="205" width="85" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -103,7 +103,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AAR Type: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxh-TM-o27">
-                                <rect key="frame" x="20" y="94" width="112.5" height="29"/>
+                                <rect key="frame" x="20" y="94" width="113" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -114,11 +114,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4GO-5p-HvI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4GO-5p-HvI">
                                 <rect key="frame" x="87" y="370" width="240" height="136"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1H-ea-tG3">
-                                <rect key="frame" x="20" y="20" width="34.5" height="29"/>
+                                <rect key="frame" x="20" y="20" width="35" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -131,12 +131,14 @@
                             <constraint firstItem="4GO-5p-HvI" firstAttribute="leading" secondItem="pYT-rn-DLN" secondAttribute="leading" constant="87" id="3hL-5U-vJn"/>
                             <constraint firstItem="qbV-ho-VJq" firstAttribute="leading" secondItem="pYT-rn-DLN" secondAttribute="leading" constant="20" id="3id-2p-pQg"/>
                             <constraint firstItem="ruK-qz-3on" firstAttribute="leading" secondItem="pYT-rn-DLN" secondAttribute="leading" constant="20" id="526-jR-pPL"/>
+                            <constraint firstItem="4GO-5p-HvI" firstAttribute="centerX" secondItem="tNg-uZ-QcH" secondAttribute="centerX" id="69h-Cm-lz7"/>
                             <constraint firstItem="W4x-VG-pFe" firstAttribute="top" secondItem="pYT-rn-DLN" secondAttribute="top" constant="279" id="D3X-q1-fHH"/>
                             <constraint firstItem="Pf1-Gk-8vt" firstAttribute="top" secondItem="pYT-rn-DLN" secondAttribute="top" constant="131" id="GWr-XL-kQk"/>
                             <constraint firstItem="fGd-wN-U1v" firstAttribute="leading" secondItem="pYT-rn-DLN" secondAttribute="leading" constant="20" id="LOu-ra-6yW"/>
                             <constraint firstItem="ruK-qz-3on" firstAttribute="top" secondItem="pYT-rn-DLN" secondAttribute="top" constant="57" id="Mzc-wi-ek5"/>
                             <constraint firstItem="pYT-rn-DLN" firstAttribute="bottom" secondItem="4GO-5p-HvI" secondAttribute="bottom" constant="268" id="RQd-cR-Wip"/>
                             <constraint firstItem="g1H-ea-tG3" firstAttribute="top" secondItem="pYT-rn-DLN" secondAttribute="top" constant="20" id="dZ5-ji-f0S"/>
+                            <constraint firstItem="4GO-5p-HvI" firstAttribute="top" secondItem="3Oz-i3-LQp" secondAttribute="bottom" constant="25" id="fL6-QD-59R"/>
                             <constraint firstItem="vxh-TM-o27" firstAttribute="leading" secondItem="pYT-rn-DLN" secondAttribute="leading" constant="20" id="gUI-NY-3ox"/>
                             <constraint firstItem="3Oz-i3-LQp" firstAttribute="leading" secondItem="pYT-rn-DLN" secondAttribute="leading" constant="20" id="hGa-UE-ZSz"/>
                             <constraint firstItem="FsO-Sp-Ap6" firstAttribute="leading" secondItem="pYT-rn-DLN" secondAttribute="leading" constant="20" id="iPy-ty-nEt"/>
@@ -159,6 +161,7 @@
                         <outlet property="retailerLabel" destination="3Oz-i3-LQp" id="k8I-7j-B2n"/>
                         <outlet property="roadLabel" destination="Pf1-Gk-8vt" id="MQy-Mh-Ps1"/>
                         <outlet property="serviceLabel" destination="ruK-qz-3on" id="mUJ-jt-J58"/>
+                        <outlet property="trainImage" destination="4GO-5p-HvI" id="tof-iy-Yas"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t09-bh-8Np" userLabel="First Responder" sceneMemberID="firstResponder"/>
