@@ -66,13 +66,13 @@
 		8CBD631E235F6DFB00912B9A /* Project_P3_Team_A */ = {
 			isa = PBXGroup;
 			children = (
-				CE020197238D70E4005C2A2E /* train-png-clipart-original.png */,
 				2047B8F8238B8C3B00CB5436 /* CURR_EQUIP.csv */,
 				2047B8F9238B8C3B00CB5436 /* CURR_EQUIP.XLS */,
 				8CBD631F235F6DFB00912B9A /* AppDelegate.swift */,
 				8CBD6321235F6DFB00912B9A /* ViewController.swift */,
 				8CBD6323235F6DFB00912B9A /* Main.storyboard */,
 				8C3BE948238CE5EB00335116 /* ViewController2.swift */,
+				CE020197238D70E4005C2A2E /* train-png-clipart-original.png */,
 				8CBD6326235F6DFE00912B9A /* Assets.xcassets */,
 				8CBD6328235F6DFE00912B9A /* LaunchScreen.storyboard */,
 				8CBD632B235F6DFE00912B9A /* Info.plist */,

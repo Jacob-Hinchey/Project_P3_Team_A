@@ -81,7 +81,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="train-png-clipart-transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="uwM-Dn-Fui">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="train-png-clipart-original.png" translatesAutoresizingMaskIntoConstraints="NO" id="uwM-Dn-Fui">
                                 <rect key="frame" x="20" y="44" width="374" height="349"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -166,7 +166,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFi-Eh-cP6">
-                                <rect key="frame" x="169" y="665" width="77" height="55"/>
+                                <rect key="frame" x="168.5" y="665" width="77" height="55"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <state key="normal" title="Save"/>
                             </button>
@@ -282,6 +282,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="train-png-clipart-transparent.png" width="920" height="779"/>
+        <image name="train-png-clipart-original.png" width="920" height="779"/>
     </resources>
 </document>
