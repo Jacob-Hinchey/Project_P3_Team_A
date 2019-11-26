@@ -56,6 +56,14 @@ class TableViewController: UITableViewController {
         {
             let vc2 = segue.destination as? ViewController2
             vc2?.ID = "555555"//must change value to id of cell clicked
+            vc2?.serviceType = "XXXX"
+            vc2?.aarType = "XXXX"
+            vc2?.roadNum = "0"
+            vc2?.material = "Steel"
+            vc2?.length = "150m"
+            vc2?.color = "Silver"
+            vc2?.axils = "8"
+            vc2?.retailerName = "Joe"
         }
     }
     

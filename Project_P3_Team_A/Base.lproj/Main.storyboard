@@ -72,8 +72,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wheels &amp; Axis: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4x-VG-pFe">
-                                <rect key="frame" x="20" y="279" width="160.5" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wheels &amp; Axils: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4x-VG-pFe">
+                                <rect key="frame" x="20" y="279" width="166" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -151,6 +151,14 @@
                     </view>
                     <connections>
                         <outlet property="IDLabel" destination="g1H-ea-tG3" id="Ln8-w6-1xh"/>
+                        <outlet property="aarLabel" destination="vxh-TM-o27" id="Y84-lL-U17"/>
+                        <outlet property="axilLabel" destination="W4x-VG-pFe" id="7UV-dr-QmH"/>
+                        <outlet property="colorLabel" destination="FsO-Sp-Ap6" id="3cN-Oe-qMc"/>
+                        <outlet property="lengthLabel" destination="qbV-ho-VJq" id="mZC-kP-8kq"/>
+                        <outlet property="materialLabel" destination="fGd-wN-U1v" id="ca4-Js-a9K"/>
+                        <outlet property="retailerLabel" destination="3Oz-i3-LQp" id="k8I-7j-B2n"/>
+                        <outlet property="roadLabel" destination="Pf1-Gk-8vt" id="MQy-Mh-Ps1"/>
+                        <outlet property="serviceLabel" destination="ruK-qz-3on" id="mUJ-jt-J58"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t09-bh-8Np" userLabel="First Responder" sceneMemberID="firstResponder"/>
