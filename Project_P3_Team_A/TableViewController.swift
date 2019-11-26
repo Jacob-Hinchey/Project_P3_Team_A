@@ -7,14 +7,11 @@
 //
 
 
-
 //TESTING
-
 // short tap will display() the train data
 // need to add filter() functionality
 // need to add refresh() functionality
 // long tap will segue to ViewController which will allow editing the data
-
 import Foundation
 import UIKit
 import CoreData
@@ -178,4 +175,3 @@ public class CSwiftV {
         return merged
     }
 }
-

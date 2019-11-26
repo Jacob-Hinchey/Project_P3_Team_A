@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2047B8FA238B8C3B00CB5436 /* CURR_EQUIP.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2047B8F8238B8C3B00CB5436 /* CURR_EQUIP.csv */; };
 		2047B8FB238B8C3B00CB5436 /* CURR_EQUIP.XLS in Resources */ = {isa = PBXBuildFile; fileRef = 2047B8F9238B8C3B00CB5436 /* CURR_EQUIP.XLS */; };
-		209714E7238CD3B800B00C96 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209714E6238CD3B800B00C96 /* TableViewController.swift */; };
+		8C3BE945238CD63E00335116 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3BE944238CD63E00335116 /* TableViewController.swift */; };
 		8CBD6320235F6DFB00912B9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD631F235F6DFB00912B9A /* AppDelegate.swift */; };
 		8CBD6322235F6DFB00912B9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD6321235F6DFB00912B9A /* ViewController.swift */; };
 		8CBD6325235F6DFB00912B9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CBD6323235F6DFB00912B9A /* Main.storyboard */; };
@@ -20,7 +20,7 @@
 /* Begin PBXFileReference section */
 		2047B8F8238B8C3B00CB5436 /* CURR_EQUIP.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CURR_EQUIP.csv; sourceTree = "<group>"; };
 		2047B8F9238B8C3B00CB5436 /* CURR_EQUIP.XLS */ = {isa = PBXFileReference; lastKnownFileType = file; path = CURR_EQUIP.XLS; sourceTree = "<group>"; };
-		209714E6238CD3B800B00C96 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../../TableViewController.swift; sourceTree = "<group>"; };
+		8C3BE944238CD63E00335116 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		8CBD631C235F6DFB00912B9A /* Project_P3_Team_A.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project_P3_Team_A.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CBD631F235F6DFB00912B9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CBD6321235F6DFB00912B9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,11 +64,11 @@
 				2047B8F9238B8C3B00CB5436 /* CURR_EQUIP.XLS */,
 				8CBD631F235F6DFB00912B9A /* AppDelegate.swift */,
 				8CBD6321235F6DFB00912B9A /* ViewController.swift */,
-				209714E6238CD3B800B00C96 /* TableViewController.swift */,
 				8CBD6323235F6DFB00912B9A /* Main.storyboard */,
 				8CBD6326235F6DFE00912B9A /* Assets.xcassets */,
 				8CBD6328235F6DFE00912B9A /* LaunchScreen.storyboard */,
 				8CBD632B235F6DFE00912B9A /* Info.plist */,
+				8C3BE944238CD63E00335116 /* TableViewController.swift */,
 			);
 			path = Project_P3_Team_A;
 			sourceTree = "<group>";
@@ -148,7 +148,7 @@
 			files = (
 				8CBD6322235F6DFB00912B9A /* ViewController.swift in Sources */,
 				8CBD6320235F6DFB00912B9A /* AppDelegate.swift in Sources */,
-				209714E7238CD3B800B00C96 /* TableViewController.swift in Sources */,
+				8C3BE945238CD63E00335116 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
