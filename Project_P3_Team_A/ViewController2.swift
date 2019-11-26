@@ -10,10 +10,15 @@ import UIKit
 
 class ViewController2: UIViewController {
     
+    var ID: String = ""
+    
+    @IBOutlet weak var IDLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Display the information and photos for a
         // table row with a stack view
+        IDLabel?.text = "ID: \(ID)"
     }
     
     override func viewWillAppear(_ animated: Bool) {

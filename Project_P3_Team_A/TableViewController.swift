@@ -50,6 +50,15 @@ class TableViewController: UITableViewController {
         self.navigationController?.setNavigationBarHidden(false,animated: true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is ViewController2
+        {
+            let vc2 = segue.destination as? ViewController2
+            vc2?.ID = "555555"//must change value to id of cell clicked
+        }
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
