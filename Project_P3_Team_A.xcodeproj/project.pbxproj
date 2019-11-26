@@ -16,6 +16,7 @@
 		8CBD6325235F6DFB00912B9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CBD6323235F6DFB00912B9A /* Main.storyboard */; };
 		8CBD6327235F6DFE00912B9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CBD6326235F6DFE00912B9A /* Assets.xcassets */; };
 		8CBD632A235F6DFE00912B9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CBD6328235F6DFE00912B9A /* LaunchScreen.storyboard */; };
+		CE020198238D70E4005C2A2E /* train-png-clipart-original.png in Resources */ = {isa = PBXBuildFile; fileRef = CE020197238D70E4005C2A2E /* train-png-clipart-original.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		8CBD6326235F6DFE00912B9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CBD6329235F6DFE00912B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CBD632B235F6DFE00912B9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE020197238D70E4005C2A2E /* train-png-clipart-original.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "train-png-clipart-original.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		8CBD631E235F6DFB00912B9A /* Project_P3_Team_A */ = {
 			isa = PBXGroup;
 			children = (
+				CE020197238D70E4005C2A2E /* train-png-clipart-original.png */,
 				2047B8F8238B8C3B00CB5436 /* CURR_EQUIP.csv */,
 				2047B8F9238B8C3B00CB5436 /* CURR_EQUIP.XLS */,
 				8CBD631F235F6DFB00912B9A /* AppDelegate.swift */,
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CBD632A235F6DFE00912B9A /* LaunchScreen.storyboard in Resources */,
+				CE020198238D70E4005C2A2E /* train-png-clipart-original.png in Resources */,
 				8CBD6327235F6DFE00912B9A /* Assets.xcassets in Resources */,
 				8CBD6325235F6DFB00912B9A /* Main.storyboard in Resources */,
 				2047B8FB238B8C3B00CB5436 /* CURR_EQUIP.XLS in Resources */,
