@@ -15,7 +15,7 @@
             <objects>
                 <tableViewController id="Kyg-FP-iay" userLabel="Table View Controller" customClass="TableViewController" customModule="Project_P3_Team_A" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qwb-4k-m85">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -43,6 +43,7 @@
                     <navigationItem key="navigationItem" title="Caboose View" id="Jhx-Xh-ihC">
                         <barButtonItem key="rightBarButtonItem" title="Filter" id="Gb7-Ok-OwG"/>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO"/>
                     <connections>
                         <segue destination="hlj-1b-2tG" kind="show" identifier="showSegue" id="ari-Rz-Uqz"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="editSegue" id="OXg-FF-Mki"/>
@@ -62,7 +63,7 @@
             <objects>
                 <viewController id="hlj-1b-2tG" customClass="ViewController2" customModule="Project_P3_Team_A" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tNg-uZ-QcH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="pYT-rn-DLN"/>
@@ -153,7 +154,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_P3_Team_A" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -168,6 +169,6 @@
         <image name="train-png-clipart-transparent.png" width="920" height="779"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="e7V-O5-E0A"/>
+        <segue reference="H02-by-hE5"/>
     </inferredMetricsTieBreakers>
 </document>

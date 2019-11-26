@@ -34,14 +34,14 @@ class TableViewController: UITableViewController {
             let arrayHeaderRowCombined : [[String : String]] = CSwiftV(with: csvData).keyedRows!
             
             for row in arrayHeaderRowCombined {
-                roadNumbers.append(row["Auto number ID"]!)
-                autoNumbers.append(row["Road number"]!)
+                autoNumbers.append(row["Auto number ID"]!)
+                roadNumbers.append(row["Road number"]!)
             }
         } catch{
             print(error)
         }
         
-        tableCells[0] = roadNumbers
+        tableCells[0] = autoNumbers
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -74,7 +74,14 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "My Cell", for: indexPath)
         
         if indexPath.section == 0 {
-            cell.textLabel?.text = String(format: "%@ - %@", roadNumbers[indexPath.row], autoNumbers[indexPath.row])
+            cell.textLabel?.text = String(format: "%@ - %@", autoNumbers[indexPath.row], roadNumbers[indexPath.row])
+        }
+        if indexPath.row % 2 == 0 {
+            cell.backgroundColor = UIColor.black
+            cell.textLabel!.textColor = UIColor.white
+        } else {
+            cell.backgroundColor = UIColor.orange
+            cell.textLabel!.textColor = UIColor.black
         }
         
         // Configure the cell...

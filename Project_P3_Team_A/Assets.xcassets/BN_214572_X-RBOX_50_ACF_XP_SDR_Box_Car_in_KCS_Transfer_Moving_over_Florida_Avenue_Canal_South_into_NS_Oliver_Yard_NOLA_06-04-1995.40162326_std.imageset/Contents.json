@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "filename" : "BN_214572_X-RBOX_50_ACF_XP_SDR_Box_Car_in_KCS_Transfer_Moving_over_Florida_Avenue_Canal_South_into_NS_Oliver_Yard_NOLA_06-04-1995.40162326_std.jpg",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
