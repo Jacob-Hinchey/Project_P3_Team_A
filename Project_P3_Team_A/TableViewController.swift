@@ -60,7 +60,7 @@ class TableViewController: UITableViewController {
     
     @IBAction func editTrain(_ gestureRecognizer: UILongPressGestureRecognizer) {
         if gestureRecognizer.state == .began {
-            //long press segue
+            performSegue(withIdentifier: "editSegue", sender: self)
         }
     }
     
