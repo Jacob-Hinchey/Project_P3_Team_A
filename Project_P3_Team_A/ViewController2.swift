@@ -72,7 +72,8 @@ class ViewController2: UIViewController {
         
         
         // Controls Font of Back Button
-        backButton.setTitleTextAttributes([ NSAttributedString.Key.font: UIFont(name: "Futura", size: 20)!], for: UIControl.State.normal)
+        // But I removed it, keep this commented out
+        //backButton.setTitleTextAttributes([ NSAttributedString.Key.font: UIFont(name: "Futura", size: 20)!], for: UIControl.State.normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
