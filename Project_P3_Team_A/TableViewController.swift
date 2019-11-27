@@ -24,8 +24,14 @@ class TableViewController: UITableViewController {
     var tableCells = [[]]
     let headers = ["Trains"]
     
+    @IBOutlet weak var filterButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Changes font of toolbar button
+        filterButton.setTitleTextAttributes([ NSAttributedString.Key.font: UIFont(name: "Futura", size: 20)!], for: UIControl.State.normal)
+
+
         
         //get the csv file and parse it
         guard let csvPath = Bundle.main.path(forResource: "CURR_EQUIP", ofType: "csv") else { return }
@@ -44,6 +50,10 @@ class TableViewController: UITableViewController {
         
         tableCells[0] = roadNumbers
     }
+    
+    
+
+    
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setToolbarHidden( true, animated: true)

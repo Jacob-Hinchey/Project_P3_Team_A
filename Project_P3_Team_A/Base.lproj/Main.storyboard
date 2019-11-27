@@ -18,16 +18,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <toolbar key="tableHeaderView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" id="LmX-ys-gZw">
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <toolbar key="tableHeaderView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="LmX-ys-gZw">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
-                                <barButtonItem title="Filter" id="gX6-yl-rEg">
+                                <barButtonItem title="Filter Results" id="gX6-yl-rEg">
+                                    <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <connections>
                                         <segue destination="BYZ-38-t0r" kind="presentation" id="aY9-v1-Uwl"/>
                                     </connections>
                                 </barButtonItem>
                             </items>
+                            <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </toolbar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="My Cell" id="u6C-fi-ex6">
@@ -56,6 +59,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
+                        <outlet property="filterButton" destination="gX6-yl-rEg" id="daq-bk-Jm4"/>
                         <segue destination="hlj-1b-2tG" kind="show" identifier="showSegue" id="ari-Rz-Uqz"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="editSegue" id="OXg-FF-Mki"/>
                     </connections>
@@ -139,6 +143,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Back" id="zof-0o-6cF">
+                                        <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="Kyg-FP-iay" kind="presentation" id="aTz-vJ-Lwr"/>
                                         </connections>
@@ -177,6 +182,7 @@
                         <outlet property="IDLabel" destination="g1H-ea-tG3" id="Ln8-w6-1xh"/>
                         <outlet property="aarLabel" destination="vxh-TM-o27" id="Y84-lL-U17"/>
                         <outlet property="axilLabel" destination="W4x-VG-pFe" id="7UV-dr-QmH"/>
+                        <outlet property="backButton" destination="zof-0o-6cF" id="Jfd-V7-NYA"/>
                         <outlet property="colorLabel" destination="FsO-Sp-Ap6" id="3cN-Oe-qMc"/>
                         <outlet property="lengthLabel" destination="qbV-ho-VJq" id="mZC-kP-8kq"/>
                         <outlet property="materialLabel" destination="fGd-wN-U1v" id="ca4-Js-a9K"/>
@@ -288,7 +294,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFi-Eh-cP6">
                                 <rect key="frame" x="173.5" y="740" width="67" height="51"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
-                                <state key="normal" title="Save"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6di-hg-v43">
                                 <rect key="frame" x="107" y="74" width="200" height="36"/>
@@ -355,6 +363,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Back" id="RJu-El-gCP">
+                                        <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="Kyg-FP-iay" kind="presentation" id="bLV-Ai-zfK"/>
                                         </connections>
@@ -399,6 +408,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="RJu-El-gCP" id="l6Y-tX-pZU"/>
+                    </connections>
                 </viewController>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Service Type" textAlignment="center" minimumFontSize="17" id="a5S-PZ-pHe">
                     <rect key="frame" x="0.0" y="0.0" width="200" height="33"/>
@@ -416,7 +428,8 @@
         <image name="train-png-clipart-original.png" width="920" height="779"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="ari-Rz-Uqz"/>
         <segue reference="aY9-v1-Uwl"/>
-        <segue reference="bLV-Ai-zfK"/>
+        <segue reference="aTz-vJ-Lwr"/>
     </inferredMetricsTieBreakers>
 </document>
