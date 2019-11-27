@@ -139,7 +139,10 @@ class TableViewController: UITableViewController {
         
         // Set the labels to the road number and service type
         if indexPath.section == 0 {
-            cell.textLabel?.text = String(format: "%@ - %@", cell.cellData["Road number"]!, cell.cellData["Service Type"]!)
+            //cell.textLabel?.text = String(format: "%@ - %@", cell.cellData["Road number"]!, cell.cellData["Service Type"]!)
+            cell.textLabel?.text = String(format: "%@: %@ - %@",cell.cellData["Auto number ID"]!, cell.cellData["Road number"]!, cell.cellData["Service Type"]!)
+            
+
         }
         
         // Alternate colors as per the client's request
