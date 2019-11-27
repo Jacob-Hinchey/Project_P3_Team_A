@@ -101,6 +101,9 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "My Cell", for: indexPath)
         
+        // Controls cell fonts
+        cell.textLabel?.font = (UIFont(name: "Futura", size: 20))
+        
         if indexPath.section == 0 {
             cell.textLabel?.text = String(format: "%@ - %@", roadNumbers[indexPath.row], serviceType[indexPath.row])
         }
