@@ -27,9 +27,14 @@ class TableViewController: UITableViewController {
     
     
     
+    @IBOutlet weak var filterButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Changes font of toolbar button
+        filterButton.setTitleTextAttributes([ NSAttributedString.Key.font: UIFont(name: "Futura", size: 20)!], for: UIControl.State.normal)
+
+
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         //get the csv file and parse it
@@ -105,11 +110,24 @@ class TableViewController: UITableViewController {
         performSegue(withIdentifier: "showSegue", sender: self)
     }
     
+    //Overrides system font for header
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else { return }
+        header.textLabel?.font = UIFont(name: "Futura", size: 25)
+        header.textLabel?.frame = header.frame
+        header.textLabel?.textAlignment = .center
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "My Cell", for: indexPath)
     // show data in cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> NewTableViewCell {
         // Cast the cell as a NewTableViewCell to use the cellData values
         let cell = tableView.dequeueReusableCell(withIdentifier: "My Cell", for: indexPath) as! NewTableViewCell
         cell.cellData = trainData[indexPath.row] // Add cellData
+        
+        // Controls cell fonts
+        cell.textLabel?.font = (UIFont(name: "Futura", size: 20))
         
         // Set the labels to the road number and service type
         if indexPath.section == 0 {

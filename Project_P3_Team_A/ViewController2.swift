@@ -29,7 +29,12 @@ class ViewController2: UIViewController {
     @IBOutlet weak var colorLabel: UILabel!
     @IBOutlet weak var axilLabel: UILabel!
     @IBOutlet weak var retailerLabel: UILabel!
-    @IBOutlet weak var trainImage: UIImageView!
+    @IBOutlet weak var trainImage1: UIImageView!
+    @IBOutlet weak var trainImage2: UIImageView!
+    @IBOutlet weak var trainImage3: UIImageView!
+    
+    
+    @IBOutlet weak var backButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +49,9 @@ class ViewController2: UIViewController {
         colorLabel?.text = "Color: \(color)"
         axilLabel?.text = "Wheels & Axils: \(axles)"
         retailerLabel?.text = "Retailer Name: \(retailerName)"
+        
+        // Controls Font of Back Button
+        backButton.setTitleTextAttributes([ NSAttributedString.Key.font: UIFont(name: "Futura", size: 20)!], for: UIControl.State.normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {

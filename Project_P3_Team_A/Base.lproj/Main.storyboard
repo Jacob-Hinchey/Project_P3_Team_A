@@ -17,17 +17,20 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qwb-4k-m85">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <toolbar key="tableHeaderView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" id="LmX-ys-gZw">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
-                                <barButtonItem title="Filter" id="gX6-yl-rEg">
+                                <barButtonItem title="Filter Results" id="gX6-yl-rEg">
+                                    <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <connections>
                                         <segue destination="BYZ-38-t0r" kind="presentation" id="aY9-v1-Uwl"/>
                                     </connections>
                                 </barButtonItem>
                             </items>
+                            <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </toolbar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="My Cell" id="u6C-fi-ex6" customClass="NewTableViewCell" customModule="Project_P3_Team_A" customModuleProvider="target">
@@ -56,6 +59,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
+                        <outlet property="filterButton" destination="gX6-yl-rEg" id="daq-bk-Jm4"/>
                         <segue destination="hlj-1b-2tG" kind="show" identifier="showSegue" id="ari-Rz-Uqz"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="editSegue" id="OXg-FF-Mki"/>
                     </connections>
@@ -125,9 +129,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4GO-5p-HvI">
-                                <rect key="frame" x="87" y="372.5" width="240" height="133.5"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1H-ea-tG3">
                                 <rect key="frame" x="20" y="20" width="39.5" height="31.5"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
@@ -139,12 +140,24 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Back" id="zof-0o-6cF">
+                                        <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="Kyg-FP-iay" kind="presentation" id="aTz-vJ-Lwr"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4GO-5p-HvI">
+                                <rect key="frame" x="95" y="355" width="224" height="120"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="biG-Ao-LIO">
+                                <rect key="frame" x="95" y="483" width="224" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pMa-mv-vQ2">
+                                <rect key="frame" x="95" y="611" width="224" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -177,6 +190,7 @@
                         <outlet property="IDLabel" destination="g1H-ea-tG3" id="Ln8-w6-1xh"/>
                         <outlet property="aarLabel" destination="vxh-TM-o27" id="Y84-lL-U17"/>
                         <outlet property="axilLabel" destination="W4x-VG-pFe" id="7UV-dr-QmH"/>
+                        <outlet property="backButton" destination="zof-0o-6cF" id="Jfd-V7-NYA"/>
                         <outlet property="colorLabel" destination="FsO-Sp-Ap6" id="3cN-Oe-qMc"/>
                         <outlet property="lengthLabel" destination="qbV-ho-VJq" id="mZC-kP-8kq"/>
                         <outlet property="materialLabel" destination="fGd-wN-U1v" id="ca4-Js-a9K"/>
@@ -184,6 +198,8 @@
                         <outlet property="roadLabel" destination="Pf1-Gk-8vt" id="MQy-Mh-Ps1"/>
                         <outlet property="serviceLabel" destination="ruK-qz-3on" id="mUJ-jt-J58"/>
                         <outlet property="trainImage" destination="4GO-5p-HvI" id="tof-iy-Yas"/>
+                        <outlet property="trainImage2" destination="biG-Ao-LIO" id="liG-Nm-kDJ"/>
+                        <outlet property="trainImage3" destination="pMa-mv-vQ2" id="PL1-xi-fBa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t09-bh-8Np" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -241,6 +257,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YnI-9y-ZY3">
+                                <rect key="frame" x="-75" y="44" width="565" height="13"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="rHD-Zh-Zdr"/>
@@ -288,7 +312,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFi-Eh-cP6">
                                 <rect key="frame" x="173.5" y="740" width="67" height="51"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
-                                <state key="normal" title="Save"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6di-hg-v43">
                                 <rect key="frame" x="107" y="74" width="200" height="36"/>
@@ -355,6 +381,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Back" id="RJu-El-gCP">
+                                        <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="Kyg-FP-iay" kind="presentation" id="bLV-Ai-zfK"/>
                                         </connections>
@@ -399,6 +426,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="RJu-El-gCP" id="l6Y-tX-pZU"/>
+                    </connections>
                 </viewController>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Service Type" textAlignment="center" minimumFontSize="17" id="a5S-PZ-pHe">
                     <rect key="frame" x="0.0" y="0.0" width="200" height="33"/>
@@ -417,6 +447,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="aY9-v1-Uwl"/>
-        <segue reference="bLV-Ai-zfK"/>
+        <segue reference="aTz-vJ-Lwr"/>
     </inferredMetricsTieBreakers>
 </document>

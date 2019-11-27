@@ -14,9 +14,14 @@ class ViewController: UIViewController {
     //after long tap we segue here
     //we need to add functionality to edit the train data
     
+    @IBOutlet weak var backButton: UIBarButtonItem!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        // Controls font of Back Button
+        backButton.setTitleTextAttributes([ NSAttributedString.Key.font: UIFont(name: "Futura", size: 20)!], for: UIControl.State.normal)
         
     }
     
