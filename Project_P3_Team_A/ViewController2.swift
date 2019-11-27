@@ -50,7 +50,7 @@ class ViewController2: UIViewController {
         materialLabel?.text = "Material: \(material)"
         lengthLabel?.text = "Length: \(length)"
         colorLabel?.text = "Color: \(color)"
-        axleLabel?.text = "Wheels & Axils: \(axles)"
+        axleLabel?.text = "Wheels & Axles: \(axles)"
         retailerLabel?.text = "Retailer Name: \(retailerName)"
         
         if (image1 != ""){
@@ -72,7 +72,7 @@ class ViewController2: UIViewController {
         
         
         // Controls Font of Back Button
-        backButton.setTitleTextAttributes([ NSAttributedString.Key.font: UIFont(name: "Futura", size: 20)!], for: UIControl.State.normal)
+      //  backButton.setTitleTextAttributes([ NSAttributedString.Key.font: UIFont(name: "Futura", size: 20)!], for: UIControl.State.normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
