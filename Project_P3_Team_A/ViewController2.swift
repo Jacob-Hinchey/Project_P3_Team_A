@@ -17,7 +17,7 @@ class ViewController2: UIViewController {
     var material: String = ""
     var length: String = ""
     var color: String = ""
-    var axils: String = ""
+    var axles: String = ""
     var retailerName: String = ""
     
     @IBOutlet weak var IDLabel: UILabel!
@@ -42,7 +42,7 @@ class ViewController2: UIViewController {
         materialLabel?.text = "Material: \(material)"
         lengthLabel?.text = "Length: \(length)"
         colorLabel?.text = "Color: \(color)"
-        axilLabel?.text = "Wheels & Axils: \(axils)"
+        axilLabel?.text = "Wheels & Axils: \(axles)"
         retailerLabel?.text = "Retailer Name: \(retailerName)"
     }
     

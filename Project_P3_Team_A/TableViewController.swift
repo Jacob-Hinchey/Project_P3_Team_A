@@ -6,8 +6,6 @@
 //  Copyright © 2019 Team A. All rights reserved.
 //
 
-
-//TESTING
 // short tap will display() the train data
 // need to add filter() functionality
 // need to add refresh() functionality
@@ -16,65 +14,76 @@ import Foundation
 import UIKit
 import CoreData
 
+// Created a custom class that adds a dictionary to the UITableViewCell so we can save all information to an individual cell
+class NewTableViewCell : UITableViewCell{
+    var cellData : [String : String] = [:]
+}
 
 class TableViewController: UITableViewController {
-    public var roadNumbers: [String] = []
-    var autoNumbers: [String] = []
-    var serviceType: [String] = []
     var tableCells = [[]]
     let headers = ["Trains"]
+    var valueToPass : [String : String] = [:]
+    var trainData : [[String : String]] = [[:]]
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         //get the csv file and parse it
         guard let csvPath = Bundle.main.path(forResource: "CURR_EQUIP", ofType: "csv") else { return }
         
         do {
             let csvData = try String(contentsOfFile: csvPath, encoding: String.Encoding.utf8)
-            let arrayHeaderRowCombined : [[String : String]] = CSwiftV(with: csvData).keyedRows!
+            trainData = CSwiftV(with: csvData).keyedRows!
             
-            for row in arrayHeaderRowCombined {
-                roadNumbers.append(row["Road number"]!)
-                serviceType.append(row["Service Type"]!)
-            }
         } catch{
             print(error)
         }
         
-        tableCells[0] = roadNumbers
+        tableCells[0] = trainData
     }
     
+    // Hide toolbar and show navBar
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setToolbarHidden( true, animated: true)
         self.navigationController?.setNavigationBarHidden(false,animated: true)
     }
     
+    // send cell data to VC2 through the segue using data from each cell
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.destination is ViewController2
+        if segue.identifier == "showSegue"
         {
-            let vc2 = segue.destination as? ViewController2
-            vc2?.ID = "555555"//must change value to id of cell clicked
-            vc2?.serviceType = "XXXX"
-            vc2?.aarType = "XXXX"
-            vc2?.roadNum = "0"
-            vc2?.material = "Steel"
-            vc2?.length = "150m"
-            vc2?.color = "Silver"
-            vc2?.axils = "8"
-            vc2?.retailerName = "Joe"
+            if segue.destination is ViewController2
+            {
+                let vc2 = segue.destination as? ViewController2
+                vc2?.ID = valueToPass["Auto number ID"]!//must change value to id of cell clicked
+                vc2?.serviceType = valueToPass["Service Type"]!
+                vc2?.aarType = valueToPass["AAR Type"]!
+                vc2?.roadNum = valueToPass["Road number"]!
+                vc2?.material = valueToPass["Construction material"]!
+                vc2?.length = valueToPass["Length-whole numbers"]!
+                vc2?.color = valueToPass["Color"]!
+                vc2?.axles = valueToPass["Wheels and axles"]!
+                vc2?.retailerName = valueToPass["Retailers Name"]!
+            }
         }
     }
     
+    // Set the total number of sections
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
+    // Set the total number of rows per section, based on the number or cells in tableCells
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return tableCells[section].count
     }
     
+    // TODO: Make this work
     @IBAction func editTrain(_ gestureRecognizer: UILongPressGestureRecognizer) {
         if gestureRecognizer.state == .began {
             performSegue(withIdentifier: "editSegue", sender: self)
@@ -84,16 +93,30 @@ class TableViewController: UITableViewController {
     // segue in show information viewcontroller
     // on short press with deselect (information not being passed yet)
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Get Cell Label
+        let indexPath = tableView.indexPathForSelectedRow!
+        let currentCell = tableView.cellForRow(at: indexPath)! as! NewTableViewCell
+        
+        //Deselect the cell after the path is grabbed
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        // Set the data to send to the segue with the cell data from selected cell
+        valueToPass = currentCell.cellData
         performSegue(withIdentifier: "showSegue", sender: self)
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "My Cell", for: indexPath)
+    // show data in cell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> NewTableViewCell {
+        // Cast the cell as a NewTableViewCell to use the cellData values
+        let cell = tableView.dequeueReusableCell(withIdentifier: "My Cell", for: indexPath) as! NewTableViewCell
+        cell.cellData = trainData[indexPath.row] // Add cellData
         
+        // Set the labels to the road number and service type
         if indexPath.section == 0 {
-            cell.textLabel?.text = String(format: "%@ - %@", roadNumbers[indexPath.row], serviceType[indexPath.row])
+            cell.textLabel?.text = String(format: "%@ - %@", cell.cellData["Road number"]!, cell.cellData["Service Type"]!)
         }
+        
+        // Alternate colors as per the client's request
         if indexPath.row % 2 == 0 {
             cell.backgroundColor = UIColor.black
             cell.textLabel!.textColor = UIColor.white
@@ -102,12 +125,10 @@ class TableViewController: UITableViewController {
             cell.textLabel!.textColor = UIColor.black
         }
         
-        // Configure the cell...
-        // Display the cell label and subtitle.
-        
         return cell
     }
     
+    // Set the headers
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section < headers.count {
             return headers[section]
@@ -115,7 +136,6 @@ class TableViewController: UITableViewController {
         
         return nil
     }
-    
 }
 
 /* THIS IS A MUCH BETTER PARSING CLASS I FOUND WE CAN USE */
