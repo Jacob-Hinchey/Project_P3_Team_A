@@ -22,7 +22,7 @@ class TableViewController: UITableViewController {
     var autoNumbers: [String] = []
     var serviceType: [String] = []
     var tableCells = [[]]
-    let headers = ["Trains"]
+    let headers = ["List of Trains"]
     
     @IBOutlet weak var filterButton: UIBarButtonItem!
     override func viewDidLoad() {
@@ -96,6 +96,14 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "showSegue", sender: self)
+    }
+    
+    //Overrides system font for header
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else { return }
+        header.textLabel?.font = UIFont(name: "Futura", size: 25)
+        header.textLabel?.frame = header.frame
+        header.textLabel?.textAlignment = .center
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
