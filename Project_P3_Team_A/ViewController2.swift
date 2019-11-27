@@ -52,37 +52,40 @@ class ViewController2: UIViewController {
         colorLabel?.text = "Color: \(color)"
         axleLabel?.text = "Wheels & Axles: \(axles)"
         retailerLabel?.text = "Retailer Name: \(retailerName)"
-        
-        if (image1 != ""){
-            image1 = String(image1.split(separator: "\\")[1])
-            image1 = String(image1.split(separator: ".")[0])
-        }
-        if (image2 != ""){
-            image2 = String(image2.split(separator: "\\")[1])
-            image2 = String(image2.split(separator: ".")[0])
-        }
-        if (image3 != ""){
-            image3 = String(image3.split(separator: "\\")[1])
-            image3 = String(image3.split(separator: ".")[0])
-        }
-            
-        trainImage1?.image = UIImage(named: "\(image1)")
-        trainImage2?.image = UIImage(named: "\(image2)")
-        trainImage3?.image = UIImage(named: "\(image3)")
-        
+      
         //adds full screen to each image
         let tapGestureRecognizer1 = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
         let tapGestureRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
         let tapGestureRecognizer3 = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
-        trainImage1.isUserInteractionEnabled = true
-        trainImage2.isUserInteractionEnabled = true
-        trainImage3.isUserInteractionEnabled = true
+       
         trainImage1.addGestureRecognizer(tapGestureRecognizer1)
         trainImage2.addGestureRecognizer(tapGestureRecognizer2)
         trainImage3.addGestureRecognizer(tapGestureRecognizer3)
-        // Controls Font of Back Button
-        // But I removed it, keep this commented out
-        //backButton.setTitleTextAttributes([ NSAttributedString.Key.font: UIFont(name: "Futura", size: 20)!], for: UIControl.State.normal)
+          
+        if (image1 != ""){
+            image1 = String(image1.split(separator: "\\")[1])
+            image1 = String(image1.split(separator: ".")[0])
+            trainImage1?.image = UIImage(named: "\(image1)")
+            trainImage1.isUserInteractionEnabled = true
+        } else {
+            trainImage1.isUserInteractionEnabled = false
+        }
+        if (image2 != ""){
+            image2 = String(image2.split(separator: "\\")[1])
+            image2 = String(image2.split(separator: ".")[0])
+            trainImage2?.image = UIImage(named: "\(image2)")
+            trainImage2.isUserInteractionEnabled = true
+        } else {
+            trainImage2.isUserInteractionEnabled = false
+        }
+        if (image3 != ""){
+            image3 = String(image3.split(separator: "\\")[1])
+            image3 = String(image3.split(separator: ".")[0])
+            trainImage3?.image = UIImage(named: "\(image3)")
+            trainImage3.isUserInteractionEnabled = true
+        } else {
+            trainImage3.isUserInteractionEnabled = false
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
