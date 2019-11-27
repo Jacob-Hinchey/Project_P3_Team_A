@@ -19,6 +19,9 @@ class ViewController2: UIViewController {
     var color: String = ""
     var axles: String = ""
     var retailerName: String = ""
+    var image1: String = ""
+    var image2: String = ""
+    var image3: String = ""
     
     @IBOutlet weak var IDLabel: UILabel!
     @IBOutlet weak var serviceLabel: UILabel!
@@ -49,6 +52,24 @@ class ViewController2: UIViewController {
         colorLabel?.text = "Color: \(color)"
         axleLabel?.text = "Wheels & Axils: \(axles)"
         retailerLabel?.text = "Retailer Name: \(retailerName)"
+        
+        if (image1 != ""){
+            image1 = String(image1.split(separator: "\\")[1])
+            image1 = String(image1.split(separator: ".")[0])
+        }
+        if (image2 != ""){
+            image2 = String(image2.split(separator: "\\")[1])
+            image2 = String(image2.split(separator: ".")[0])
+        }
+        if (image3 != ""){
+            image3 = String(image3.split(separator: "\\")[1])
+            image3 = String(image3.split(separator: ".")[0])
+        }
+            
+        trainImage1?.image = UIImage(named: "\(image1)")
+        trainImage2?.image = UIImage(named: "\(image2)")
+        trainImage3?.image = UIImage(named: "\(image3)")
+        
         
         // Controls Font of Back Button
         backButton.setTitleTextAttributes([ NSAttributedString.Key.font: UIFont(name: "Futura", size: 20)!], for: UIControl.State.normal)

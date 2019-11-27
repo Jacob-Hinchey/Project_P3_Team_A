@@ -73,7 +73,17 @@ class TableViewController: UITableViewController {
                 vc2?.length = valueToPass["Length-whole numbers"]!
                 vc2?.color = valueToPass["Color"]!
                 vc2?.axles = valueToPass["Wheels and axles"]!
+                
                 vc2?.retailerName = valueToPass["Retailers Name"]!
+                if (valueToPass["Picture file name 2"] != nil){
+                    vc2?.image1 = valueToPass["Picture file name 2"]!
+                }
+                if (valueToPass["Picture file name 3"] != nil){
+                    vc2?.image2 = valueToPass["Picture file name 3"]!
+                }
+                if (valueToPass["Picture file name 4"] != nil){
+                    vc2?.image3 = valueToPass["Picture file name 4"]!
+                }
             }
         }
     }
