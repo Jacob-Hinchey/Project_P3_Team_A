@@ -27,7 +27,7 @@ class ViewController2: UIViewController {
     @IBOutlet weak var materialLabel: UILabel!
     @IBOutlet weak var lengthLabel: UILabel!
     @IBOutlet weak var colorLabel: UILabel!
-    @IBOutlet weak var axilLabel: UILabel!
+    @IBOutlet weak var axleLabel: UILabel!
     @IBOutlet weak var retailerLabel: UILabel!
     @IBOutlet weak var trainImage1: UIImageView!
     @IBOutlet weak var trainImage2: UIImageView!
@@ -47,7 +47,7 @@ class ViewController2: UIViewController {
         materialLabel?.text = "Material: \(material)"
         lengthLabel?.text = "Length: \(length)"
         colorLabel?.text = "Color: \(color)"
-        axilLabel?.text = "Wheels & Axils: \(axles)"
+        axleLabel?.text = "Wheels & Axils: \(axles)"
         retailerLabel?.text = "Retailer Name: \(retailerName)"
         
         // Controls Font of Back Button

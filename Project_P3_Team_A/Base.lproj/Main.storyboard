@@ -33,7 +33,7 @@
                             <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </toolbar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="My Cell" id="u6C-fi-ex6" customClass="NewTableViewCell" customModule="Project_P3_Team_A" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="My Cell" id="u6C-fi-ex6" customClass="NewTableViewCell" customModule="Project_P3_Team_A">
                                 <rect key="frame" x="0.0" y="72" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u6C-fi-ex6" id="96a-H7-8cz">
@@ -147,7 +147,7 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4GO-5p-HvI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4GO-5p-HvI" userLabel="Train Image1">
                                 <rect key="frame" x="95" y="355" width="224" height="120"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="biG-Ao-LIO">
@@ -189,7 +189,7 @@
                     <connections>
                         <outlet property="IDLabel" destination="g1H-ea-tG3" id="Ln8-w6-1xh"/>
                         <outlet property="aarLabel" destination="vxh-TM-o27" id="Y84-lL-U17"/>
-                        <outlet property="axilLabel" destination="W4x-VG-pFe" id="7UV-dr-QmH"/>
+                        <outlet property="axleLabel" destination="W4x-VG-pFe" id="bGA-4s-8ji"/>
                         <outlet property="backButton" destination="zof-0o-6cF" id="Jfd-V7-NYA"/>
                         <outlet property="colorLabel" destination="FsO-Sp-Ap6" id="3cN-Oe-qMc"/>
                         <outlet property="lengthLabel" destination="qbV-ho-VJq" id="mZC-kP-8kq"/>
@@ -197,7 +197,7 @@
                         <outlet property="retailerLabel" destination="3Oz-i3-LQp" id="k8I-7j-B2n"/>
                         <outlet property="roadLabel" destination="Pf1-Gk-8vt" id="MQy-Mh-Ps1"/>
                         <outlet property="serviceLabel" destination="ruK-qz-3on" id="mUJ-jt-J58"/>
-                        <outlet property="trainImage" destination="4GO-5p-HvI" id="tof-iy-Yas"/>
+                        <outlet property="trainImage1" destination="4GO-5p-HvI" id="NYT-za-N35"/>
                         <outlet property="trainImage2" destination="biG-Ao-LIO" id="liG-Nm-kDJ"/>
                         <outlet property="trainImage3" destination="pMa-mv-vQ2" id="PL1-xi-fBa"/>
                     </connections>

@@ -21,7 +21,7 @@ class NewTableViewCell : UITableViewCell{
 
 class TableViewController: UITableViewController {
     var tableCells = [[]]
-    let headers = ["Trains"]
+    let headers = ["List of Trains"]
     var valueToPass : [String : String] = [:]
     var trainData : [[String : String]] = [[:]]
     
@@ -65,7 +65,7 @@ class TableViewController: UITableViewController {
             if segue.destination is ViewController2
             {
                 let vc2 = segue.destination as? ViewController2
-                vc2?.ID = valueToPass["Auto number ID"]!//must change value to id of cell clicked
+                vc2?.ID = valueToPass["Auto number ID"]!
                 vc2?.serviceType = valueToPass["Service Type"]!
                 vc2?.aarType = valueToPass["AAR Type"]!
                 vc2?.roadNum = valueToPass["Road number"]!
