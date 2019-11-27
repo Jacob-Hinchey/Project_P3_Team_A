@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tUj-tg-BU7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Ll-im-nfv">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,22 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <toolbar key="tableHeaderView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="LmX-ys-gZw">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <items>
-                                <barButtonItem title="Filter Results" id="gX6-yl-rEg">
-                                    <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <connections>
-                                        <segue destination="BYZ-38-t0r" kind="presentation" id="aY9-v1-Uwl"/>
-                                    </connections>
-                                </barButtonItem>
-                            </items>
-                            <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </toolbar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="My Cell" id="u6C-fi-ex6">
-                                <rect key="frame" x="0.0" y="72" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u6C-fi-ex6" id="96a-H7-8cz">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -59,7 +46,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
-                        <outlet property="filterButton" destination="gX6-yl-rEg" id="daq-bk-Jm4"/>
+                        <outlet property="filterButton" destination="Gb7-Ok-OwG" id="Dxl-9E-nzy"/>
                         <segue destination="hlj-1b-2tG" kind="show" identifier="showSegue" id="ari-Rz-Uqz"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="editSegue" id="OXg-FF-Mki"/>
                     </connections>
@@ -71,7 +58,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-725" y="113"/>
+            <point key="canvasLocation" x="184.05797101449278" y="112.5"/>
         </scene>
         <!--View Controller2-->
         <scene sceneID="QZx-Ts-RQq">
@@ -138,18 +125,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4I5-FM-EOL">
-                                <rect key="frame" x="0.0" y="764" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Back" id="zof-0o-6cF">
-                                        <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <segue destination="Kyg-FP-iay" kind="presentation" id="aTz-vJ-Lwr"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -182,7 +157,6 @@
                         <outlet property="IDLabel" destination="g1H-ea-tG3" id="Ln8-w6-1xh"/>
                         <outlet property="aarLabel" destination="vxh-TM-o27" id="Y84-lL-U17"/>
                         <outlet property="axilLabel" destination="W4x-VG-pFe" id="7UV-dr-QmH"/>
-                        <outlet property="backButton" destination="zof-0o-6cF" id="Jfd-V7-NYA"/>
                         <outlet property="colorLabel" destination="FsO-Sp-Ap6" id="3cN-Oe-qMc"/>
                         <outlet property="lengthLabel" destination="qbV-ho-VJq" id="mZC-kP-8kq"/>
                         <outlet property="materialLabel" destination="fGd-wN-U1v" id="ca4-Js-a9K"/>
@@ -194,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t09-bh-8Np" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="359.4202898550725" y="-239.0625"/>
+            <point key="canvasLocation" x="1269.5652173913045" y="-239.0625"/>
         </scene>
         <!--Launch View Controller-->
         <scene sceneID="vtY-IG-kBQ">
@@ -229,7 +203,7 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Kyg-FP-iay" kind="presentation" identifier="StartButtonSegue" id="H02-by-hE5"/>
+                                    <segue destination="Kyg-FP-iay" kind="show" id="zA5-OZ-zne"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="By Team A CS 4153" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32T-dl-B4b">
@@ -256,120 +230,83 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Po5-dN-lWb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1523" y="113"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Pm9-fA-aYp">
-            <objects>
-                <navigationController id="7qd-GI-WTZ" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uf8-st-3Rv">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="tUj-tg-BU7" kind="relationship" relationship="rootViewController" id="rc3-ZX-06Y"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XvN-9G-X3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationItem title="Caboose View" id="vIj-nG-4iV">
-                    <barButtonItem key="rightBarButtonItem" title="Filter" id="wVc-cg-DSR"/>
-                    <connections>
-                        <outlet property="titleView" destination="uf8-st-3Rv" id="HA0-1q-gmD"/>
-                    </connections>
-                </navigationItem>
-            </objects>
-            <point key="canvasLocation" x="-2386" y="113"/>
+            <point key="canvasLocation" x="-613.04347826086962" y="112.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_P3_Team_A" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFi-Eh-cP6">
-                                <rect key="frame" x="173.5" y="740" width="67" height="51"/>
+                                <rect key="frame" x="173.5" y="696" width="67" height="51"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6di-hg-v43">
-                                <rect key="frame" x="107" y="74" width="200" height="36"/>
+                                <rect key="frame" x="107" y="30" width="200" height="36"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Service Type" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="foa-Qv-Vqs">
-                                <rect key="frame" x="107" y="140" width="200" height="36"/>
+                                <rect key="frame" x="107" y="96" width="200" height="36"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AAR Type" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EhJ-gZ-io8">
-                                <rect key="frame" x="107" y="206" width="200" height="36"/>
+                                <rect key="frame" x="107" y="162" width="200" height="36"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Road Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OkV-Nr-LQZ">
-                                <rect key="frame" x="107" y="272" width="200" height="37"/>
+                                <rect key="frame" x="107" y="228" width="200" height="37"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Reporting Mark" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ukw-bw-Xst">
-                                <rect key="frame" x="107" y="339" width="200" height="36"/>
+                                <rect key="frame" x="107" y="295" width="200" height="36"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Material" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n0y-H5-LTK">
-                                <rect key="frame" x="107" y="405" width="200" height="36"/>
+                                <rect key="frame" x="107" y="361" width="200" height="36"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Length" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tL8-zf-kOV">
-                                <rect key="frame" x="107" y="471" width="200" height="36"/>
+                                <rect key="frame" x="107" y="427" width="200" height="36"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Color" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5cK-yV-Unn">
-                                <rect key="frame" x="107" y="537" width="200" height="36"/>
+                                <rect key="frame" x="107" y="493" width="200" height="36"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wheels &amp; Axis" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A5L-IW-Xr3">
-                                <rect key="frame" x="107" y="603" width="200" height="36"/>
+                                <rect key="frame" x="107" y="559" width="200" height="36"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Retailers Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lF9-jb-PEP">
-                                <rect key="frame" x="107" y="669" width="200" height="36"/>
+                                <rect key="frame" x="107" y="625" width="200" height="36"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XSc-9T-cld">
-                                <rect key="frame" x="0.0" y="852" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Back" id="RJu-El-gCP">
-                                        <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <segue destination="Kyg-FP-iay" kind="presentation" id="bLV-Ai-zfK"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -408,28 +345,31 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="backButton" destination="RJu-El-gCP" id="l6Y-tX-pZU"/>
-                    </connections>
                 </viewController>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Service Type" textAlignment="center" minimumFontSize="17" id="a5S-PZ-pHe">
-                    <rect key="frame" x="0.0" y="0.0" width="200" height="33"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="366.66666666666669" y="488.83928571428567"/>
+            <point key="canvasLocation" x="1276.8115942028987" y="488.83928571428567"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iHR-pO-Ywj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Ll-im-nfv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zcT-Bg-LfM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tUj-tg-BU7" kind="relationship" relationship="rootViewController" id="pkW-wv-P3B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kWP-4N-ECN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1523.1884057971015" y="112.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="train-png-clipart-original.png" width="920" height="779"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="ari-Rz-Uqz"/>
-        <segue reference="aY9-v1-Uwl"/>
-        <segue reference="aTz-vJ-Lwr"/>
-    </inferredMetricsTieBreakers>
 </document>
