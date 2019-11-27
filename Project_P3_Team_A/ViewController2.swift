@@ -70,7 +70,16 @@ class ViewController2: UIViewController {
         trainImage2?.image = UIImage(named: "\(image2)")
         trainImage3?.image = UIImage(named: "\(image3)")
         
-        
+        //adds full screen to each image
+        let tapGestureRecognizer1 = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+        let tapGestureRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+        let tapGestureRecognizer3 = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+        trainImage1.isUserInteractionEnabled = true
+        trainImage2.isUserInteractionEnabled = true
+        trainImage3.isUserInteractionEnabled = true
+        trainImage1.addGestureRecognizer(tapGestureRecognizer1)
+        trainImage2.addGestureRecognizer(tapGestureRecognizer2)
+        trainImage3.addGestureRecognizer(tapGestureRecognizer3)
         // Controls Font of Back Button
         // But I removed it, keep this commented out
         //backButton.setTitleTextAttributes([ NSAttributedString.Key.font: UIFont(name: "Futura", size: 20)!], for: UIControl.State.normal)
@@ -81,5 +90,30 @@ class ViewController2: UIViewController {
         self.navigationController?.setNavigationBarHidden(false,animated: true)
     }
     
-
+    
+    //opens image when tapped
+    @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {
+        let imageView = sender.view as! UIImageView
+        let newImageView = UIImageView(image: imageView.image)
+        newImageView.frame = UIScreen.main.bounds
+        newImageView.backgroundColor = .black
+        newImageView.contentMode = .scaleAspectFit
+        newImageView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
+        newImageView.addGestureRecognizer(tap)
+        self.view.addSubview(newImageView)
+        self.navigationController?.isNavigationBarHidden = true
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    //closes image when tapped
+    @objc func dismissFullscreenImage(_ sender: UITapGestureRecognizer) {
+        self.navigationController?.isNavigationBarHidden = false
+        self.tabBarController?.tabBar.isHidden = false
+        sender.view?.removeFromSuperview()
+    }
+    
 }
+
+
+
