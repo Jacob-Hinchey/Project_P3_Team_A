@@ -50,7 +50,7 @@ class ViewController2: UIViewController {
         materialLabel?.text = "Material: \(material)"
         lengthLabel?.text = "Length: \(length)"
         colorLabel?.text = "Color: \(color)"
-        axleLabel?.text = "Wheels & Axils: \(axles)"
+        axleLabel?.text = "Wheels & Axles: \(axles)"
         retailerLabel?.text = "Retailer Name: \(retailerName)"
         
         if (image1 != ""){

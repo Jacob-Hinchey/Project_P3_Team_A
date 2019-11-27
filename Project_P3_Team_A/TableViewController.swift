@@ -71,8 +71,8 @@ class TableViewController: UITableViewController {
                 vc2?.roadNum = valueToPass["Road number"]!
                 vc2?.material = valueToPass["Construction material"]!
                 vc2?.length = valueToPass["Length-whole numbers"]!
-                vc2?.color = valueToPass["Color"]!
-                vc2?.axles = valueToPass["Wheels and axles"]!
+                vc2?.color = valueToPass["Color"] ?? ""
+                vc2?.axles = valueToPass["Wheels and axles"] ?? ""
                 
                 vc2?.retailerName = valueToPass["Retailers Name"]!
                 if (valueToPass["Picture file name 2"] != nil){
