@@ -118,8 +118,6 @@ class TableViewController: UITableViewController {
         header.textLabel?.textAlignment = .center
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "My Cell", for: indexPath)
     // show data in cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> NewTableViewCell {
         // Cast the cell as a NewTableViewCell to use the cellData values
