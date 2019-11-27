@@ -47,7 +47,7 @@ class ViewController2: UIViewController {
         retailerLabel?.text = "Retailer Name: \(retailerName)"
         
         // Controls Font of Back Button
-//        backButton.setTitleTextAttributes([ NSAttributedString.Key.font: UIFont(name: "Futura", size: 20)!], for: UIControl.State.normal)
+        backButton.setTitleTextAttributes([ NSAttributedString.Key.font: UIFont(name: "Futura", size: 20)!], for: UIControl.State.normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
